@@ -72,21 +72,22 @@ const Hero = () => {
         </div>
 
         {/* Featured Mug Display */}
-        {/* <div className="mt-16 flex justify-center">
+        <div className="mt-16 flex justify-center">
           <div className="relative group">
-            <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500 rounded-full opacity-75 group-hover:opacity-100 animate-pulse blur-lg"></div>
-            <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-              <img
-                src="https://images.pexels.com/photos/6764125/pexels-photo-6764125.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Custom cartoon portrait mug"
-                className="w-64 h-64 object-cover rounded-2xl shadow-2xl transform group-hover:scale-105 transition-all duration-500"
-              />
-              <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                ✨ Your Photo Here!
-              </div>
+            {/* Glow effect */}
+            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-400 blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+            {/* Mug image */}
+            <img
+              src="/images/mug1.png"
+              alt="Custom mug with vibrant cartoon art"
+              className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-3xl shadow-2xl transform group-hover:scale-105 group-hover:rotate-3 transition-all duration-500"
+            />
+            {/* Accent badge */}
+            <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+              New Arrival
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
 
       {/* Scroll Indicator */}
