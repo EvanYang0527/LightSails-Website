@@ -26,8 +26,8 @@ const HowItWorks = () => {
     },
     {
       icon: Gift,
-      title: "DIY Sublimation",
-      description: "Use our heat press and pick up your mug at our booth",
+      title: "DIY Your Own Mug",
+      description: "Design your mug with favorite words and stylish graphics- we’ll have it ready for pickup at our booth.",
       color: "from-orange-500 to-yellow-500",
       bgColor: "from-orange-50 to-yellow-50"
     }
