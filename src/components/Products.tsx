@@ -17,7 +17,7 @@ const Products = () => {
     {
       id: 2,
       title: "Pet Portrait Mug",
-      description: "Your furry friend as a Disney-style character",
+      description: "Your furry friend as a cartoon-style character",
       beforeImage: "https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=400",
       afterImage: "https://images.pexels.com/photos/4792282/pexels-photo-4792282.jpeg?auto=compress&cs=tinysrgb&w=400",
       price: "$24.99",
