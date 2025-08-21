@@ -30,26 +30,18 @@ const Hero = () => {
         {/* Left: Hero Image (HUGE) */}
         <div className="order-2 lg:order-1 relative flex justify-center lg:justify-start">
           {/* Gradient blobs behind image (modern artist style) */}
-          <div
-            aria-hidden
-            className="absolute -top-14 -left-20 h-72 w-72 rounded-full blur-3xl opacity-50 bg-gradient-to-tr from-yellow-300 via-pink-400 to-fuchsia-500"
-          />
-          <div
-            aria-hidden
-            className="absolute bottom-0 -right-10 h-80 w-80 rounded-full blur-3xl opacity-50 bg-gradient-to-br from-cyan-300 via-blue-400 to-purple-600"
-          />
 
           <div className="relative -ml-2 sm:-ml-6 lg:-ml-10">
             <img
-              src="/images/mug1.png"
+              src={`${import.meta.env.BASE_URL}images/mug1.png`}
               alt="Custom mug with vibrant cartoon art"
-              className="h-[68vh] sm:h-[72vh] lg:h-[78vh] w-auto object-cover rounded-[2rem] ring-1 ring-white/20 saturate-125 contrast-110
-                         transform hover:scale-[1.02] hover:-rotate-2 transition-all duration-500"
+              className="h-[68vh] sm:h-[72vh] lg:h-[63vh] w-auto object-cover rounded-[2rem] saturate-125 contrast-110
+                         transform -rotate-1 hover:scale-[1.02] hover:-rotate-3 transition-all duration-500"
             />
             {/* Subtle frame accent */}
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-0 rounded-[2rem] ring-8 ring-white/10"
+              className="pointer-events-none absolute inset-0 rounded-[2rem]"
             />
           </div>
         </div>
