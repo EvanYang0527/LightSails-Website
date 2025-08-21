@@ -20,14 +20,14 @@ const HowItWorks = () => {
     {
       icon: Printer,
       title: "Expert Printing",
-      description: "We use premium sublimation printing to create a durable, vibrant, and dishwasher-safe mug",
+      description: "Printed with premium sublimation for vibrant color, lasting durability, and dishwasher-safe wear",
       color: "from-pink-500 to-orange-500",
       bgColor: "from-pink-50 to-orange-50"
     },
     {
       icon: Gift,
-      title: "Magical Delivery",
-      description: "Pick up at our booth or schedule home delivery anywhere in Maryland",
+      title: "DIY Your Own Mug",
+      description: "Design your mug with favorite words and stylish graphics- we’ll have it ready for pickup at our booth",
       color: "from-orange-500 to-yellow-500",
       bgColor: "from-orange-50 to-yellow-50"
     }
@@ -78,11 +78,11 @@ const HowItWorks = () => {
                   {step.description}
                 </p>
 
-                {index === steps.length - 1 && (
+                {/* {index === steps.length - 1 && (
                   <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                     Start Your Order
                   </button>
-                )}
+                )} */}
               </div>
 
               {/* Visual */}

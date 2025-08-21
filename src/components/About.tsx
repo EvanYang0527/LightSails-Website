@@ -101,7 +101,7 @@ const About = () => {
             },
             {
               title: "Personal Touch",
-              description: "Each creation is uniquely yours, telling your story in a magical, Disney-inspired style.",
+              description: "Each creation is uniquely yours, telling your story in a magical, cartoon-inspired style.",
               color: "from-pink-500 to-orange-500"
             }
           ].map((value, index) => (
