@@ -115,11 +115,11 @@ const Contact = () => {
               <div className="space-y-4">
                 <div className="flex items-center text-white/90">
                   <Mail className="h-5 w-5 mr-4 text-yellow-400" />
-                  <span>hello@lightsailsllc.com</span>
+                  <span>lightsailsllc@gmail.com</span>
                 </div>
                 <div className="flex items-center text-white/90">
                   <Phone className="h-5 w-5 mr-4 text-yellow-400" />
-                  <span>(410) 555-MUGS</span>
+                  <span>(240) 470-6263</span>
                 </div>
                 <div className="flex items-center text-white/90">
                   <MapPin className="h-5 w-5 mr-4 text-yellow-400" />

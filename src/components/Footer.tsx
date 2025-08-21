@@ -33,9 +33,7 @@ const Footer = () => {
               </div>
               
               <p className="text-white/80 leading-relaxed mb-6 max-w-md">
-                Transforming your precious memories into Disney/Pixar-style cartoon magic, 
-                one sublimation mug at a time. Proudly serving Maryland communities at 
-                farmers markets and festivals.
+              Transform your favorite photos into magical cartoon portraits with our custom sublimation mugs. Perfect for gifts, memories, and everyday magic!
               </p>
 
               <div className="flex items-center space-x-2 text-white/70 mb-4">
@@ -80,11 +78,11 @@ const Footer = () => {
               <div className="space-y-3 mb-6">
                 <div className="flex items-center text-white/70">
                   <Mail className="h-4 w-4 mr-3 text-blue-400" />
-                  <span className="text-sm">hello@lightsailsllc.com</span>
+                  <span className="text-sm">lightsailsllc@gmail.com</span>
                 </div>
                 <div className="flex items-center text-white/70">
                   <Phone className="h-4 w-4 mr-3 text-green-400" />
-                  <span className="text-sm">(410) 555-MUGS</span>
+                  <span className="text-sm">(240) 470-6263</span>
                 </div>
               </div>
 

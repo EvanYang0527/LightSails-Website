@@ -72,7 +72,7 @@ const Hero = () => {
         </div>
 
         {/* Featured Mug Display */}
-        <div className="mt-16 flex justify-center">
+        {/* <div className="mt-16 flex justify-center">
           <div className="relative group">
             <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500 rounded-full opacity-75 group-hover:opacity-100 animate-pulse blur-lg"></div>
             <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
@@ -86,7 +86,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Scroll Indicator */}
