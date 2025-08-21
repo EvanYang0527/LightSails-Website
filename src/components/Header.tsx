@@ -5,6 +5,14 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const navItems = [
+    { label: 'Home', id: 'hero' },
+    { label: 'About', id: 'about' },
+    { label: 'How It Works', id: 'how-it-works' },
+    { label: 'Events', id: 'events' },
+    { label: 'Contact', id: 'contact' },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -43,15 +51,15 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {['Home', 'About', 'How It Works', 'Events', 'Contact'].map((item) => (
+            {navItems.map(({ label, id }) => (
               <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
+                key={id}
+                onClick={() => scrollToSection(id)}
                 className={`font-medium transition-colors hover:text-purple-600 ${
                   isScrolled ? 'text-gray-700' : 'text-white/90'
                 }`}
               >
-                {item}
+                {label}
               </button>
             ))}
           </nav>
@@ -68,13 +76,13 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden bg-white rounded-lg shadow-lg mt-2 py-4">
-            {['Home', 'About', 'How It Works', 'Events', 'Contact'].map((item) => (
+            {navItems.map(({ label, id }) => (
               <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
+                key={id}
+                onClick={() => scrollToSection(id)}
                 className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
               >
-                {item}
+                {label}
               </button>
             ))}
           </div>
