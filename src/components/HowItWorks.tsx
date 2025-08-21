@@ -26,8 +26,8 @@ const HowItWorks = () => {
     },
     {
       icon: Gift,
-      title: "Magical Delivery",
-      description: "Pick up at our booth or schedule home delivery anywhere in Maryland",
+      title: "DIY Sublimation",
+      description: "Use our heat press and pick up your mug at our booth",
       color: "from-orange-500 to-yellow-500",
       bgColor: "from-orange-50 to-yellow-50"
     }
