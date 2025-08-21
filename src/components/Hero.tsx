@@ -35,8 +35,8 @@ const Hero = () => {
             <img
               src={`${import.meta.env.BASE_URL}images/mug1.png`}
               alt="Custom mug with vibrant cartoon art"
-              className="h-[68vh] sm:h-[72vh] lg:h-[63vh] w-auto object-cover rounded-[2rem] saturate-125 contrast-110
-                         transform -rotate-1 hover:scale-[1.02] hover:-rotate-3 transition-all duration-500"
+              className="max-h-full w-auto object-contain rounded-[2rem] saturate-125 contrast-110
+                 transform -rotate-1 hover:scale-[1.02] hover:-rotate-3 transition-all duration-500"
             />
             {/* Subtle frame accent */}
             <div
