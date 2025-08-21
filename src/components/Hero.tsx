@@ -3,88 +3,103 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   const scrollToHowItWorks = () => {
-    const element = document.getElementById('how-it-works');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    const el = document.getElementById('how-it-works');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-blue-500 to-pink-500">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%223%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.08%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%223%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
       </div>
 
-      {/* Floating Elements */}
-      <div className="absolute inset-0">
+      {/* Floating sparkles */}
+      <div className="absolute inset-0 pointer-events-none">
         <Sparkles className="absolute top-1/4 left-1/4 text-yellow-300 h-6 w-6 animate-bounce" style={{ animationDelay: '0s' }} />
         <Sparkles className="absolute top-1/3 right-1/4 text-pink-300 h-4 w-4 animate-bounce" style={{ animationDelay: '1s' }} />
         <Sparkles className="absolute bottom-1/3 left-1/3 text-blue-300 h-5 w-5 animate-bounce" style={{ animationDelay: '2s' }} />
         <Sparkles className="absolute bottom-1/4 right-1/3 text-green-300 h-4 w-4 animate-bounce" style={{ animationDelay: '0.5s' }} />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-          Bring Your Story to Life
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-pink-300">
-            — On a Mug
-          </span>
-        </h1>
-        
-        <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Transform your favorite photos into magical cartoon portraits 
-          with our custom sublimation mugs. Perfect for gifts, memories, and everyday magic!
-        </p>
+      {/* Grid layout: big image on left, content on right */}
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+        {/* Left: Hero Image (HUGE) */}
+        <div className="order-2 lg:order-1 relative flex justify-center lg:justify-start">
+          {/* Gradient blobs behind image (modern artist style) */}
+          <div
+            aria-hidden
+            className="absolute -top-14 -left-20 h-72 w-72 rounded-full blur-3xl opacity-50 bg-gradient-to-tr from-yellow-300 via-pink-400 to-fuchsia-500"
+          />
+          <div
+            aria-hidden
+            className="absolute bottom-0 -right-10 h-80 w-80 rounded-full blur-3xl opacity-50 bg-gradient-to-br from-cyan-300 via-blue-400 to-purple-600"
+          />
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button
-            onClick={scrollToHowItWorks}
-            className="group bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2"
-          >
-            <span>See How It Works</span>
-            <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-          
-          <button
-            onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
-            className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
-          >
-            Find Us at Events
-          </button>
-        </div>
-
-        {/* Trust Indicators */}
-        <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-white/80">
-          <div className="text-center">
-            <div className="text-2xl font-bold">100+</div>
-            <div className="text-sm">Happy Customers</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold">Maryland</div>
-            <div className="text-sm">Local Business</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold">AI-Powered</div>
-            <div className="text-sm">Custom Art</div>
-          </div>
-        </div>
-
-        {/* Featured Mug Display */}
-        <div className="mt-16 flex justify-center">
-          <div className="relative group">
-            {/* Glow effect */}
-            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-400 blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
-            {/* Mug image */}
+          <div className="relative -ml-2 sm:-ml-6 lg:-ml-10">
             <img
               src="/images/mug1.png"
               alt="Custom mug with vibrant cartoon art"
-              className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-3xl shadow-2xl transform group-hover:scale-105 group-hover:rotate-3 transition-all duration-500"
+              className="h-[68vh] sm:h-[72vh] lg:h-[78vh] w-auto object-cover rounded-[2rem] ring-1 ring-white/20 saturate-125 contrast-110
+                         transform hover:scale-[1.02] hover:-rotate-2 transition-all duration-500"
             />
-            {/* Accent badge */}
-            <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-              New Arrival
+            {/* Subtle frame accent */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 rounded-[2rem] ring-8 ring-white/10"
+            />
+          </div>
+        </div>
+
+        {/* Right: Content */}
+        <div className="order-1 lg:order-2 text-center lg:text-left">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            Bring Your Story to Life
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-pink-300">
+              — On a Mug
+            </span>
+          </h1>
+
+          <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-2xl lg:max-w-none leading-relaxed mx-auto lg:mx-0">
+            Transform your favorite photos into magical cartoon portraits with our custom
+            sublimation mugs. Perfect for gifts, memories, and everyday magic!
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+            <button
+              onClick={scrollToHowItWorks}
+              className="group bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full text-lg font-semibold
+                         hover:from-yellow-500 hover:to-orange-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl
+                         flex items-center space-x-2"
+            >
+              <span>See How It Works</span>
+              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+
+            <button
+              onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
+              className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-purple-700 transition-all duration-300"
+            >
+              Find Us at Events
+            </button>
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="mt-12 flex flex-wrap justify-center lg:justify-start items-center gap-8 text-white/80">
+            <div className="text-center">
+              <div className="text-2xl font-bold">100+</div>
+              <div className="text-sm">Happy Customers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold">Maryland</div>
+              <div className="text-sm">Local Business</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold">AI-Powered</div>
+              <div className="text-sm">Custom Art</div>
             </div>
           </div>
         </div>
