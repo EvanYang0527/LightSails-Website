@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Star, Heart, Sparkles } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 const Products = () => {
   const [hoveredProduct, setHoveredProduct] = useState<number | null>(null);
