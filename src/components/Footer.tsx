@@ -91,7 +91,7 @@ const Footer = () => {
                 <p className="text-sm text-white/70 mb-3">Follow our journey:</p>
                 <div className="flex space-x-3">
                   <a
-                    href="#"
+                    href="https://www.instagram.com/lightsailsmugs/"
                     className="bg-gradient-to-r from-pink-500 to-purple-600 p-3 rounded-full hover:from-pink-600 hover:to-purple-700 transform hover:scale-110 transition-all duration-300"
                     aria-label="Instagram"
                   >

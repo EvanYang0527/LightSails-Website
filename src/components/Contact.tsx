@@ -141,7 +141,7 @@ const Contact = () => {
               
               <div className="grid grid-cols-3 gap-4">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/lightsailsmugs/"
                   className="bg-gradient-to-br from-pink-500 to-purple-600 p-4 rounded-2xl text-center hover:from-pink-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 group"
                 >
                   <Instagram className="h-8 w-8 text-white mx-auto mb-2 group-hover:scale-110 transition-transform" />
