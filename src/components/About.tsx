@@ -62,7 +62,7 @@ const About = () => {
           <div className="relative">
             <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
               <img
-                src="/images/BoothDesign.JPG"
+                src={`${import.meta.env.BASE_URL}images/BoothDesign.JPG`}
                 alt="Happy family at farmers market"
                 className="w-full h-64 object-cover rounded-2xl shadow-lg"
               />
