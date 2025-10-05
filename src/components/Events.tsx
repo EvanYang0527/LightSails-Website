@@ -4,45 +4,38 @@ import { Calendar, MapPin, Clock, ExternalLink } from 'lucide-react';
 const Events = () => {
   const upcomingEvents = [
     {
-      name: "Ellicott City Spring Market",
-      date: "March 15-16, 2025",
-      time: "9:00 AM - 4:00 PM",
-      location: "Historic Ellicott City, MD",
-      description: "Join us for the opening weekend of spring market season!",
-      featured: true
-    },
-    {
-      name: "Annapolis Farmers Market",
-      date: "March 22, 2025",
-      time: "8:00 AM - 1:00 PM",
-      location: "West Street, Annapolis, MD",
-      description: "Weekly market with fresh produce and local artisans",
+      name: "Bowie International Festival",
+      date: "September 13, 2025",
+      time: "11:00 AM - 3:00 PM",
+      location: "Allen Pond Park, Bowie, MD",
+      description: "A celebration of world cultures with dance, music, kids’ activities, vendors, and global cuisine.",
       featured: false
     },
     {
-      name: "Columbia Festival of Arts",
-      date: "April 5-6, 2025",
-      time: "10:00 AM - 6:00 PM",
-      location: "Merriweather Park, Columbia, MD",
-      description: "Annual celebration of local artists and creators",
+      name: "Germantown October Fest",
+      date: "October 4, 2025",
+      time: "11:00 AM - 5:00 PM",
+      location: "BlackRock Center for the Arts & surrounding area, Germantown, MD",
+      description: "Annual fall celebration with parade, artisan market, food trucks, live music, carnival, and family fun.",
       featured: true
     },
     {
-      name: "Frederick Craft Fair",
-      date: "April 12-13, 2025",
-      time: "10:00 AM - 5:00 PM",
-      location: "Baker Park, Frederick, MD",
-      description: "Handmade goods and artisan crafts in beautiful Baker Park",
-      featured: false
+      name: "26th Annual Hereford Fall Festival",
+      date: "October 18, 2025",
+      time: "10:00 AM – 6:00 PM",
+      location: "Hereford Volunteer Fire Company / Festival Grounds, 17300 York Road, Parkton, MD (entrance from 17200 York Road) ",
+      description: "Two days of live music, food trucks, artisan vendors, family activities, tractor shuttles, and fall festival fun.",
+      featured: true
     },
     {
-      name: "Baltimore Harbor Festival",
-      date: "May 3-5, 2025",
-      time: "11:00 AM - 7:00 PM",
-      location: "Inner Harbor, Baltimore, MD",
-      description: "Three-day festival celebrating Maryland's harbor culture",
+      name: "National Harbor Christmas Market & Holiday Craft Show",
+      date: "Saturdays: December 6, December 13, December 20, 2025",
+      time: "12:00 PM – 6:00 PM",
+      location: "American Way Outdoor Park, 151 Waterfront Street, Oxon Hill / National Harbor, MD",
+      description: `A festive seasonal market series running Saturdays in December. Explore handcrafted gifts, holiday décor, artisan vendors, live music, photos with Santa, and more. Part of the broader “Christmas Market & Holiday Craft Show” series running weekends Nov 29 – Dec 20.`,
       featured: true
     }
+    
   ];
 
   return (
@@ -120,10 +113,16 @@ const Events = () => {
                   </div>
 
                   <div className="mt-4 md:mt-0 md:ml-8">
-                    <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg flex items-center space-x-2">
-                      <span>Get Directions</span>
-                      <ExternalLink className="h-4 w-4" />
-                    </button>
+                    <a
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg flex items-center space-x-2">
+                        <span>Get Directions</span>
+                        <ExternalLink className="h-4 w-4" />
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -132,7 +131,7 @@ const Events = () => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="mt-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl p-8 md:p-12 text-center">
+        {/* <div className="mt-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl p-8 md:p-12 text-center">
           <h3 className="text-3xl font-bold text-gray-800 mb-4">
             Never Miss an Event!
           </h3>
@@ -151,7 +150,7 @@ const Events = () => {
               Subscribe
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
