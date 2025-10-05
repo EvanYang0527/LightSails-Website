@@ -26,7 +26,7 @@ const About = () => {
                 Our Story
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                LightSails, LLC is a passionate Maryland-based small business that blends cutting-edge AI creativity 
+                LightSailsMugs is a passionate Maryland-based small business that blends cutting-edge AI creativity 
                 with traditional sublimation printing. What started as a love project has grown into a beloved presence 
                 at local farmers markets and craft shows across our beautiful state.
               </p>
